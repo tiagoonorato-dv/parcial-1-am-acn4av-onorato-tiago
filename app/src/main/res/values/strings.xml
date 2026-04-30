@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">parcial-1-am-acn4av-onorato-tiago</string>
+    <string name="app_name">PetCare Planner</string>
+    <string name="welcome_title">¡Bienvenido a la Veterinaria!</string>
+
+    <!-- Perfil de Mascota -->
+    <string name="pet_name_value">Rocco</string>
+    <string name="pet_breed_value">Golden Retriever</string>
+
+    <!-- Secciones -->
+    <string name="section_vaccines">Registrar Vacunas</string>
+    <string name="section_appointments">Programar Consulta</string>
+
+    <!-- Botones y Hints -->
+    <string name="hint_vaccine">Nombre de la vacuna</string>
+    <string name="hint_appointment">Día y Hora (ej: Lunes 14:00)</string>
+    <string name="btn_add_vaccine">+</string>
+    <string name="btn_schedule">Agendar Turno</string>
 </resources>
