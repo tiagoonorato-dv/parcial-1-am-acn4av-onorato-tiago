@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="pet_primary">#4CAF50</color>
-    <color name="pet_primary_dark">#388E3C</color>
-    <color name="pet_accent">#FF4081</color>
-
-    <color name="bg_app">#FFFFFF</color>
     <color name="text_main">#FFFFFF</color>
-    <color name="text_secondary">#FFFFFF</color>
-    <color name="white">#FFFFFF</color>
+    <color name="pet_primary">#4CAF50</color> <!-- Verde para destacar -->
+    <color name="bg_app">#000000</color>     <!-- Fondo Negro Total -->
+    <color name="white">#FFFFFF</color>      <!-- Letras Blancas -->
+    <color name='text'>#FFFFFF</color>
+    <color name="text_secondary">#BDBDBD</color> <!-- Gris para info menos importante -->
+    <color name="card_bg">#1A1A1A</color>    <!-- Gris muy oscuro para las "tarjetas" -->
 </resources>
