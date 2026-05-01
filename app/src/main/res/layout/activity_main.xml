@@ -29,6 +29,23 @@
                 android:gravity="center"
                 android:layout_marginBottom="24dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mascotas registradas:"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
             <!-- PERFIL PROFESIONAL -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -121,6 +138,7 @@
                 android:layout_marginTop="32dp"/>
 
             <LinearLayout
+                android:id="@+id/containerAppointments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -129,21 +147,23 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
+                    android:id="@+id/editAppointment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_appointment"
+                    android:hint="Día y hora (Ej: Martes 16:00)"
                     android:textColor="@color/white"
                     android:textColorHint="@color/text_secondary"
                     android:backgroundTint="@color/pet_primary"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
+                    android:id="@+id/btnSchedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_schedule"
+                    android:text="AGENDAR TURNO"
                     android:backgroundTint="@color/pet_primary"
                     android:textColor="@color/white"
-                    android:textStyle="bold"/>
+                    android:layout_marginTop="8dp"/>
             </LinearLayout>
 
         </LinearLayout>

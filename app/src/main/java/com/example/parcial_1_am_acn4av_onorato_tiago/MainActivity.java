@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText editVaccine;
     private Button btnAddVaccine;
     private LinearLayout containerVaccines;
+    private EditText editAppointment;
+    private Button btnSchedule;
+    private LinearLayout containerAppointments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,20 @@ public class MainActivity extends AppCompatActivity {
         editVaccine = findViewById(R.id.editVaccine);
         btnAddVaccine = findViewById(R.id.btnAddVaccine);
         containerVaccines = findViewById(R.id.containerVaccines);
+        editAppointment = findViewById(R.id.editAppointment);
+        btnSchedule = findViewById(R.id.btnSchedule);
+        containerAppointments = findViewById(R.id.containerAppointments);
+
+        btnSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String info = editAppointment.getText().toString().trim();
+                if (!info.isEmpty()) {
+                    agregarConsultaDinamica(info);
+                    editAppointment.setText("");
+                }
+            }
+        });
 
         btnAddVaccine.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!vaccineName.isEmpty()) {
                     registrarVacunaDinamica(vaccineName);
-                    // Limpiamos el campo de texto
                     editVaccine.setText("");
                 } else {
                     Toast.makeText(MainActivity.this, "Por favor, escribe el nombre de la vacuna", Toast.LENGTH_SHORT).show();
@@ -41,19 +57,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     private void registrarVacunaDinamica(String nombreVacuna) {
-        // Creamos un nuevo TextView mediante código
         TextView nuevaVacunaEntry = new TextView(this);
-
-        // Configuramos sus propiedades
-        nuevaVacunaEntry.setText("Vacuna aplicada: " + nombreVacuna);
+        nuevaVacunaEntry.setText("💉 Vacuna aplicada: " + nombreVacuna);
         nuevaVacunaEntry.setTextSize(16);
         nuevaVacunaEntry.setPadding(0, 8, 0, 8);
-
-        // Usamos los colores definidos en res/values/colors.xml
         nuevaVacunaEntry.setTextColor(getResources().getColor(R.color.text_main));
+        containerVaccines.addView(nuevaVacunaEntry, 0);
+    }
 
-        containerVaccines.addView(nuevaVacunaEntry, 0); // El 0 lo agrega al principio de la lista
+    private void agregarConsultaDinamica(String datos) {
+        TextView tv = new TextView(this);
+        tv.setText("🗓️ Turno: " + datos);
+        tv.setTextColor(getResources().getColor(R.color.white));
+        tv.setTextSize(16);
+        tv.setPadding(0, 8, 0, 8);
+        containerAppointments.addView(tv, 0);
     }
 }
